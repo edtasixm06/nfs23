@@ -1,0 +1,31 @@
+version: "3"
+services:
+  ldap:
+    image: edtasixm06/ldap22:latest
+    container_name: ldap.edt.org
+    hostname: ldap.edt.org
+    ports: 
+      - "389:389"
+    networks:
+      - mynet
+  nfs:
+    image: edtasixm06/nfs23:alpine
+    container_name: nfs.edt.org
+    privileged: yes
+    ports:
+      - "2048:2049"
+    volumes:
+      - "data-nfs:/export"
+    networks:
+      - mynet 
+  ldap:
+    image: edtasixm06/pam22:ldap
+    container_name: pam.edt.org
+    hostname: pem.edt.org
+    networks:
+      - mynet
+networks:
+  mynet:
+volumes:
+  data-nfs:
+
