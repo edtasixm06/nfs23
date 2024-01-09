@@ -22,6 +22,7 @@ services:
     image: edtasixm06/pam22:ldap
     container_name: pam.edt.org
     hostname: pem.edt.org
+    command: sleep infinity
     networks:
       - mynet
 networks:
