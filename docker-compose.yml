@@ -18,7 +18,7 @@ services:
       - "data-nfs:/export"
     networks:
       - mynet 
-  ldap:
+  pam:
     image: edtasixm06/pam22:ldap
     container_name: pam.edt.org
     hostname: pem.edt.org
