@@ -1,4 +1,4 @@
-# nfs23:alpine
+# nfs23:debian
 ## @edt ASIX M06-ASO Curs 2023-2024
 
 #### NFS Debian
